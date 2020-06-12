@@ -21,13 +21,14 @@ paho-mqtt = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
-
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+black = "^19.10b0"
 
 [tool.poetry.scripts]
 run = "enviroplusmonitor:main"
 
 [tool.poetry.urls]
 issues = "https://github.com/greenthegarden/enviroplus-monitor/issues"
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+

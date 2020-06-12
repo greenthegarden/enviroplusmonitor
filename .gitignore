@@ -15,3 +15,7 @@ docs/_build/
 resources/config.ini
 
 *.lock
+
+# do not add venv
+.venv/*
+
