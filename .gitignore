@@ -1,0 +1,17 @@
+**/__pycache__/
+.mypy_cache/
+.nox/
+.pytest_cache/
+build/
+.coverage
+docs/_build/
+*.swp
+*.egg-info/
+
+# do not keep logs
+*.log
+
+# do not keep config
+resources/config.ini
+
+*.lock
