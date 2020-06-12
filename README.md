@@ -41,7 +41,7 @@ pyenv global 3.8.3
 
 ```sh
 # Create a virtual environment called enviroplus that is based on 3.8.3
-pyenv virtualenv 3.8.3 enviroplus 
+pyenv virtualenv 3.8.3 enviroplus
 # Install poetry into the enviroplus virtual env
 pyenv activate enviroplus
 python -m pip install poetry
@@ -72,7 +72,7 @@ Set up hooks for pre-commit, using
 
 ```sh
 # in the top level folder
-pre-commit install
+pre-commit install && pre-commit install -t pre-push
 ```
 
 Run using,
