@@ -5,6 +5,7 @@ from datetime import timedelta
 
 from enviroplusmonitor.sensors import dht22, gas, weather
 from enviroplusmonitor.utilities import configurationhandler
+
 # from enviroplusmonitor.utilities import influxdbclienthandler
 from timeloop import Timeloop
 
@@ -26,6 +27,7 @@ def publish_configuration_topics():
 # https://medium.com/greedygame-engineering/an-elegant-way-to-run-periodic-tasks-in-python-61b7c477b679
 tl = Timeloop()
 
+
 @tl.job(
     interval=timedelta(
         seconds=int(configurationhandler.config["job"]["SAMPLE_PERIOD_SECS"])
@@ -38,7 +40,7 @@ def publish_sensor_measurements():
     gas.publish_mqtt_discoverable_payload()
 
     # except (RuntimeError, TypeError, NameError):
-    #     pass        
+    #     pass
     # gas.publish_influx_payload()
     # if bool(configurationhandler.config["sensors"]["DHT22_ENABLE"]):
     #     dht22.publish_mqtt_discoverable_payload()
