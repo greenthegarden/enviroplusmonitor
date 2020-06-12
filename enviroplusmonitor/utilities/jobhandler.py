@@ -1,9 +1,9 @@
 __author__ = "Philip Cutler"
 
 import logging
-from datetime import timedelta
+from datetime import datetime, timedelta
 
-from sensors import dht22, gas, weather
+# from sensors import dht22, gas, weather
 from utilities import configurationhandler
 
 # from enviroplusmonitor.utilities import influxdbclienthandler
@@ -15,12 +15,12 @@ module_logger = logging.getLogger(
 )
 
 
-# send configuration messages
-def publish_configuration_topics():
-    weather.publish_configuration_topics()
-    gas.publish_configuration_topics()
-    # if bool(configurationhandler.config["sensors"]["DHT22_ENABLE"]):
-    #     dht22.publish_configuration_topics()
+# # send configuration messages
+# def publish_configuration_topics():
+#     weather.publish_configuration_topics()
+#     gas.publish_configuration_topics()
+#     # if bool(configurationhandler.config["sensors"]["DHT22_ENABLE"]):
+#     #     dht22.publish_configuration_topics()
 
 
 # set up timer
@@ -34,10 +34,11 @@ tl = Timeloop()
     )
 )
 def publish_sensor_measurements():
-    module_logger.info("Publishing ...")
-    # try:
-    weather.publish_mqtt_discoverable_payload()
-    gas.publish_mqtt_discoverable_payload()
+    print("Test at time {time}".format(time=datetime.now().strftime("%H:%M:%S")))
+    # module_logger.info("Publishing ...")
+    # # try:
+    # weather.publish_mqtt_discoverable_payload()
+    # gas.publish_mqtt_discoverable_payload()
 
     # except (RuntimeError, TypeError, NameError):
     #     pass

@@ -15,5 +15,5 @@ def configure():
     global ureg
     # import unit registry and definitions
     ureg = pint.UnitRegistry()
-    module_logger.info("enviroplusmonitor/resources/default_en.txt")
-    ureg.load_definitions("enviroplusmonitor/resources/default_en.txt")
+    module_logger.info("./resources/default_en.txt")
+    ureg.load_definitions("./resources/default_en.txt")

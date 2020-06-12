@@ -58,21 +58,21 @@ def run(parser):
 
     from utilities import mqttclienthandler
 
-    # mqttclienthandler.configure_client()
-    # mqttclienthandler.connect_to_broker()
+    mqttclienthandler.configure_client()
+    mqttclienthandler.connect_to_broker()
 
     # # # from enviroplusmonitor.utilities import influxdbclienthandler
     # # # influxdbclienthandler.configure_client()
 
-    # from enviroplusmonitor.utilities import unitregistryhandler
+    from utilities import unitregistryhandler
 
-    # unitregistryhandler.configure()
+    unitregistryhandler.configure()
 
-    # from enviroplusmonitor.utilities import jobhandler
+    from utilities import jobhandler
 
     # jobhandler.publish_configuration_topics()
 
-    # jobhandler.tl.start(block=True)
+    jobhandler.tl.start(block=True)
 
 
 if __name__ == "__main__":
