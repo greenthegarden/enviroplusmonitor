@@ -43,6 +43,25 @@ poetry config virtualenvs.in-project true
 ```
 
 ```sh
+# Install pre-commit into the tools virtual env
+pyenv activate tools
+pip install pre-commit
+# Leave the virtual env
+pyenv deactivate
+# As we have already added the tool venv, it will work directly
+pre-commit --version
+```
+
+Set up hooks for pre-commit, using
+
+```sh
+# in the top level folder
+pre-commit install
+```
+
+
+
+```sh
 pip install nox
 nox
 ```
