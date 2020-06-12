@@ -4,7 +4,7 @@ __author__ = "Philip Cutler"
 import json
 import logging
 
-import enviroplusmonitor.utilities.configurationhandler as configurationhandler
+import utilities.configurationhandler as configurationhandler
 
 module_logger = logging.getLogger(
     configurationhandler.config["logging"]["MODULE_LOGGER"]

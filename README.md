@@ -4,14 +4,29 @@ https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-enviro-plus
 
 ## Requirements
 
-```
+### RPi Interfaces
+
+Ensure I2C interface is activated.
+
+### Pyenv
+
+Install using
+
+```sh
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt install git
 sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev zlib1g-dev libssl-dev openssl libgdbm-dev libgdbm-compat-dev liblzma-dev libreadline-dev libncursesw5-dev libffi-dev uuid-dev
+curl https://pyenv.run | bash
 ```
 
-Ensure I2C interface is activated.
+Add the following lines to your ~/.bashrc, or ~/.zshrc,
+
+```sh
+export PATH="~/.pyenv/bin:~/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
 
 ## Running
 
@@ -40,15 +55,16 @@ pyenv global 3.8.3 enviroplus
 poetry --version
 # That is poetry since 1.0.0
 poetry config virtualenvs.in-project true
+poetry install
 ```
 
 ```sh
-# Install pre-commit into the tools virtual env
-pyenv activate tools
-pip install pre-commit
+# Install pre-commit into the enviroplus virtual env
+pyenv activate enviroplus
+python -m pip install pre-commit
 # Leave the virtual env
 pyenv deactivate
-# As we have already added the tool venv, it will work directly
+# As the enviroplus venv has already been added, it will work directly
 pre-commit --version
 ```
 
@@ -59,7 +75,11 @@ Set up hooks for pre-commit, using
 pre-commit install
 ```
 
+Run using,
 
+```sh
+poetry run enviroplusmonitor/enviroplusmonitor.py
+```
 
 ```sh
 pip install nox

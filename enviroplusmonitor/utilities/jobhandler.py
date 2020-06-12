@@ -3,8 +3,8 @@ __author__ = "Philip Cutler"
 import logging
 from datetime import timedelta
 
-from enviroplusmonitor.sensors import dht22, gas, weather
-from enviroplusmonitor.utilities import configurationhandler
+from sensors import dht22, gas, weather
+from utilities import configurationhandler
 
 # from enviroplusmonitor.utilities import influxdbclienthandler
 from timeloop import Timeloop

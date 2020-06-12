@@ -56,7 +56,7 @@ def run(parser):
         default_level=configurationhandler.config["logging"]["LOG_DEFAULT_LEVEL"],
     )
 
-    # from enviroplusmonitor.utilities import mqttclienthandler
+    from utilities import mqttclienthandler
 
     # mqttclienthandler.configure_client()
     # mqttclienthandler.connect_to_broker()

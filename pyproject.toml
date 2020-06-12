@@ -16,12 +16,25 @@ keywords = ["Enviro+",
 
 [tool.poetry.dependencies]
 python = "^3.8"
+adafruit-circuitpython-dht = "*"
+ads1015 = "*"
 configobj = "*"
+enviroplus = "*"
+i2cdevice = "*"
+influxdb = "*"
+json-schema-codegen = "*"
+jsonschema = "*"
 paho-mqtt = "*"
+pimoroni-bme280 = "*"
+pint = "*"
+pydantic = "*"
+smbus = "*"
+timeloop = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 black = "^19.10b0"
+
 
 [tool.poetry.scripts]
 run = "enviroplusmonitor:main"

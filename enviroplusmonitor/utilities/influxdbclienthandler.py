@@ -1,7 +1,7 @@
 import json
 import logging
 
-import enviroplusmonitor.utilities.configurationhandler as configurationhandler
+import utilities.configurationhandler as configurationhandler
 from influxdb import InfluxDBClient
 from influxdb.client import InfluxDBClientError
 

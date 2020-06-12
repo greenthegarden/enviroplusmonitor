@@ -1,7 +1,7 @@
 __author__ = "Philip Cutler"
 
 import logging
-from enviroplusmonitor.utilities import (
+from utilities import (
     configurationhandler,
     mqttclienthandler,
     schemahandler,

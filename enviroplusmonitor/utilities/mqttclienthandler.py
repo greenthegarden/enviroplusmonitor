@@ -8,7 +8,7 @@ import time
 import urllib.parse as urlparse
 import uuid
 
-import enviroplusmonitor.utilities.configurationhandler as configurationhandler
+import utilities.configurationhandler as configurationhandler
 import paho.mqtt.client as mqttc
 
 logger = logging.getLogger(__name__)

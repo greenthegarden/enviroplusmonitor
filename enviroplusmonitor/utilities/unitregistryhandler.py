@@ -1,6 +1,6 @@
 import logging
 
-import enviroplusmonitor.utilities.configurationhandler as configurationhandler
+import utilities.configurationhandler as configurationhandler
 import pint
 
 module_logger = logging.getLogger(
