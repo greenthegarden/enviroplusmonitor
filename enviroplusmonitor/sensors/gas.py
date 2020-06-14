@@ -10,14 +10,14 @@ __author__ = "Philip Cutler"
 import logging
 
 # import internal modules
-from enviroplusmonitor.utilities import (
+from utilities import (
     configurationhandler,
     homeassistanthandler,
     mqttclienthandler,
     schemahandler,
     unitregistryhandler,
 )
-from enviroplusmonitor.classes import (
+from classes import (
     sensorRecord,
     mics6814MeasurementPayload,
     measurementRecord,
@@ -38,7 +38,7 @@ def sensor_readings():
     """Get readings from each gas sensor on the MICS6814
 
     Returns:
-        dict: 
+        dict:
     """
     all = gas.read_all()
     readings = {
