@@ -3,7 +3,7 @@ __author__ = "Philip Cutler"
 import logging
 from datetime import datetime, timedelta
 
-# from sensors import dht22, gas, weather
+from sensors import dht22, gas, weather
 from utilities import configurationhandler
 
 # from enviroplusmonitor.utilities import influxdbclienthandler
@@ -35,10 +35,10 @@ tl = Timeloop()
 )
 def publish_sensor_measurements():
     print("Test at time {time}".format(time=datetime.now().strftime("%H:%M:%S")))
-    # module_logger.info("Publishing ...")
+    module_logger.info("Publishing ...")
     # # try:
-    # weather.publish_mqtt_discoverable_payload()
-    # gas.publish_mqtt_discoverable_payload()
+    weather.publish_mqtt_discoverable_payload()
+    gas.publish_mqtt_discoverable_payload()
 
     # except (RuntimeError, TypeError, NameError):
     #     pass
