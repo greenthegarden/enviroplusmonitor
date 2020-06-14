@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from sensors import dht22, gas, weather
 from utilities import configurationhandler
 
-# from enviroplusmonitor.utilities import influxdbclienthandler
+# from utilities import influxdbclienthandler
 from timeloop import Timeloop
 
 

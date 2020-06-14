@@ -6,7 +6,7 @@ from utilities import (
     mqttclienthandler,
     schemahandler,
 )
-from enviroplusmonitor.classes import configPayload
+from classes import configPayload
 
 module_logger = logging.getLogger(
     configurationhandler.config["logging"]["MODULE_LOGGER"]
@@ -26,7 +26,7 @@ def node_id(sensor_label):
 
     Parameters:
       sensor_label:
-    
+
     Returns:
       str: node_id
   """
