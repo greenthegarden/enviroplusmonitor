@@ -6,13 +6,13 @@ import logging
 from subprocess import PIPE, Popen
 
 # import internal modules
-from enviroplusmonitor.utilities import (
+from utilities import (
     configurationhandler,
     homeassistanthandler,
     mqttclienthandler,
     unitregistryhandler,
 )
-from enviroplusmonitor.classes import (
+from classes import (
     sensorRecord,
     bme280MeasurementPayload,
     measurementRecord,
@@ -50,7 +50,7 @@ sensor_label = str(configurationhandler.config["sensors"]["WEATHER_LABEL"])
 
 
 def get_cpu_temperature():
-    """Return the CPU temperature using 
+    """Return the CPU temperature using
 
     Returns:
           float: cpu temperature
@@ -86,7 +86,7 @@ def sensor_readings():
     """Get readings from each sensor on the BME280
 
     Returns:
-        dict: 
+        dict:
     """
     temperature_reading = compensated_temperature()
     pressure_reading = bme280.get_pressure()

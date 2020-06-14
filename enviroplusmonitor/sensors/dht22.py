@@ -11,9 +11,9 @@ import adafruit_dht
 import board
 
 # import internal modules
-import enviroplusmonitor.utilities.configurationhandler as configurationhandler
-import enviroplusmonitor.utilities.mqttclienthandler as mqttclienthandler
-import enviroplusmonitor.utilities.unitregistryhandler as unitregistryhandler
+import utilities.configurationhandler as configurationhandler
+import utilities.mqttclienthandler as mqttclienthandler
+import utilities.unitregistryhandler as unitregistryhandler
 
 from jsonschema import validate
 from typing import Any, List

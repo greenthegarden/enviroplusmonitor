@@ -78,6 +78,7 @@ pre-commit install && pre-commit install -t pre-push
 Run using,
 
 ```sh
+chmod +x enviroplusmonitor/enviroplusmonitor.py
 poetry run enviroplusmonitor/enviroplusmonitor.py
 ```
 
