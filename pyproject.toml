@@ -28,8 +28,10 @@ paho-mqtt = "*"
 pimoroni-bme280 = "*"
 pint = "*"
 pydantic = "*"
+'RPi.GPIO' = "*"
 smbus = "*"
 timeloop = "*"
+tldextract = "^2.2.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
